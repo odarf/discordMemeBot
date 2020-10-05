@@ -20,16 +20,20 @@ async def leave(ctx):
 
 @bot.command(pass_context=True)
 async def yt(ctx, req):
-    words = req.split()
-    string = ""
+    input_words = req.split()
+    yt_req = ""
 
-    for word in words:
-        string += word + "+"
+    for word in input_words:
+        yt_req += word + "+"
 
-    result = YoutubeSearch(string, max_results=20).to_json()
-    data = json.loads(result)
-    rnd = random.randint(0, 19)
-    result = data["videos"][rnd]["url_suffix"]
-    await ctx.send("https://www.youtube.com"+result)
+    data = json.loads(YoutubeSearch(yt_req, max_results=20).to_json())
+    result_suffix = data["videos"][random.randint(0, 19)]["url_suffix"]
+    await ctx.send("https://www.youtube.com" + result_suffix)
 
-bot.run(token)
+
+def main():
+    bot.run(token)
+    
+    
+if __name__ == "__main__":
+    main()    
