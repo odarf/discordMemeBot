@@ -5,12 +5,12 @@ import applemusicpy
 from youtube_search import YoutubeSearch
 from discord.ext import commands
 
-token = 'NzYxMjA0Nzk2MTQ0MzUzMjgw.X3XNNQ.Iq77g9EcEHrOf7w6v-HgEv8UWA0'
+token = 'your_token'
 bot = commands.Bot(command_prefix='!')
 bot.remove_command('help')
 
 reddit = praw.Reddit(client_id="zAmSKq4rw44kdA",
-                     client_secret="JYNBubsgry0rnrWJYBvev7m7zv8",
+                     client_secret="your_secret",
                      user_agent="discordMemeBot",
                      redirect_uri="http://127.0.0.1:65010/authorize_callback")
 
