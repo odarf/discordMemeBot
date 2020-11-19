@@ -1,16 +1,15 @@
 import json
 import random
 import praw
-import applemusicpy
 from youtube_search import YoutubeSearch
 from discord.ext import commands
 
-token = 'your_token'
+token = 'NzYxMjA0Nzk2MTQ0MzUzMjgw.X3XNNQ.gfXvBTR2b6ko61YbV6aqGKLedec'
 bot = commands.Bot(command_prefix='!')
 bot.remove_command('help')
 
 reddit = praw.Reddit(client_id="zAmSKq4rw44kdA",
-                     client_secret="your_secret",
+                     client_secret="JYNBubsgry0rnrWJYBvev7m7zv8",
                      user_agent="discordMemeBot",
                      redirect_uri="http://127.0.0.1:65010/authorize_callback")
 
