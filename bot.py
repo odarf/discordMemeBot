@@ -4,7 +4,7 @@ import praw
 from youtube_search import YoutubeSearch
 from discord.ext import commands
 
-token = 'NzYxMjA0Nzk2MTQ0MzUzMjgw.X3XNNQ.gfXvBTR2b6ko61YbV6aqGKLedec'
+token = ''
 bot = commands.Bot(command_prefix='!')
 bot.remove_command('help')
 
